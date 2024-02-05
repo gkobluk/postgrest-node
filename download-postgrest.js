@@ -25,7 +25,7 @@ switch (platform) {
     osRelease = "freebsd"
     break
   case "linux":
-    osRelease = `linux-${arch}`
+    osRelease = `linux-static-${arch}`
     break
   // case 'aix': console.log("IBM AIX platform");
   //   break;
@@ -44,7 +44,7 @@ switch (platform) {
 // any patches to the bindings... Maybe only sync major versions in the future?
 // Either that or tag the releases for older version e.g. 1.2.3-postgrest6
 // NOTE: Version 8.0.0 doesn't seem to have osx support
-const releaseVersionToUse = "8.0.0"
+const releaseVersionToUse = "11.2.2"
 
 module.exports = async () => {
   // Get all the assets from the github release page
